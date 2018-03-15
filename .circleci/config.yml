@@ -57,6 +57,8 @@ jobs:
 #          path: ~/spring5-recipe-app-using-project-lombok-junit-test/tmp/test-results
 #      - store_test_results:
 #          path: test-results
+#      - store_test_results:
+#          path: ~/spring5-recipe-app-using-project-lombok-junit-test/tmp/test-results
       - store_test_results:
-          path: ~/spring5-recipe-app-using-project-lombok-junit-test/tmp/test-results
+          path: ~/spring5-recipe-app-using-project-lombok-junit-test/tmp/test-results/report.xml
 
