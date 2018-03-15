@@ -30,12 +30,12 @@ jobs:
           - v1-dependencies-{{ checksum "pom.xml" }}
           # fallback to using the latest cache if no exact match is found
           - v1-dependencies-
-      - run:
-          name: Creating Sumary Artifacts
-          command: |
-            echo "my artifact file /tmp/test-results"
-            mkdir ~/spring5-recipe-app-using-project-lombok-junit-test/tmp;
-            mkdir ~/spring5-recipe-app-using-project-lombok-junit-test/tmp/test-results;
+#      - run:
+#          name: Creating Sumary Artifacts
+#          command: |
+#            echo "my artifact file /tmp/test-results"
+#            mkdir ~/spring5-recipe-app-using-project-lombok-junit-test/tmp;
+#            mkdir ~/spring5-recipe-app-using-project-lombok-junit-test/tmp/test-results;
 
       - run: mvn dependency:go-offline
 
@@ -50,10 +50,11 @@ jobs:
       # run tests!
       - run: mvn integration-test
       
-      - store_artifacts:
-          path: ~/spring5-recipe-app-using-project-lombok-junit-test/tmp/test-results
-
+#      - store_artifacts:
+#          path: ~/spring5-recipe-app-using-project-lombok-junit-test/tmp/test-results
+#
+#      - store_test_results:
+#          path: ~/spring5-recipe-app-using-project-lombok-junit-test/tmp/test-results
       - store_test_results:
-          path: ~/spring5-recipe-app-using-project-lombok-junit-test/tmp/test-results
-
+          path: test-results
 
