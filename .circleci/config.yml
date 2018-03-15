@@ -30,6 +30,17 @@ jobs:
           - v1-dependencies-{{ checksum "pom.xml" }}
           # fallback to using the latest cache if no exact match is found
           - v1-dependencies-
+      - run:
+          name: Creating Sumary Artifacts
+          command: |
+            echo "my artifact file /tmp/test-results"
+            mkdir /tmp/test-results;
+
+      - store_artifacts:
+          path: /tmp/test-results
+
+      - store_test_results:
+          path: test-results
 
       - run: mvn dependency:go-offline
 
@@ -38,8 +49,8 @@ jobs:
             - ~/.m2
           key: v1-dependencies-{{ checksum "pom.xml" }}
           
-      - store_test_results:
-          path: /tmp/test-results
+#      - store_test_results:
+#          path: /tmp/test-results
         
       # run tests!
       - run: mvn integration-test
