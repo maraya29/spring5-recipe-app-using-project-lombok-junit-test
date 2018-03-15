@@ -65,7 +65,7 @@ jobs:
 #          path: ~/spring5-recipe-app-using-project-lombok-junit-test/tmp/test-results/report.xml
 
       - store_test_results:
-          path: target/test-reports
+          path: target
       
       - store_artifacts:
           path: target/spring5-recipe-app-0.0.1-SNAPSHOT.jar
