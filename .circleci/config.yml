@@ -36,6 +36,7 @@ jobs:
             echo "my artifact file /tmp/test-results"
             mkdir -p ~/spring5-recipe-app-using-project-lombok-junit-test/tmp;
             mkdir -p ~/spring5-recipe-app-using-project-lombok-junit-test/tmp/test-results;
+            cat ~/spring5-recipe-app-using-project-lombok-junit-test/tmp/test-results > report.xml 
 
       - run: mvn dependency:go-offline
 
