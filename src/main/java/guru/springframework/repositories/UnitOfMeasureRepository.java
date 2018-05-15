@@ -6,7 +6,7 @@ import org.springframework.data.repository.CrudRepository;
 import java.util.Optional;
 
 /**
- * Created by Machin on 6/13/17.
+ * Created by Machin on 3/13/18.
  */
 public interface UnitOfMeasureRepository extends CrudRepository<UnitOfMeasure, Long> {
 

@@ -7,7 +7,7 @@ import org.springframework.lang.Nullable;
 import org.springframework.stereotype.Component;
 
 /**
- * Created by Machin on 6/21/17.
+ * Created by Machin on 3/21/18.
  */
 @Component
 public class IngredientCommandToIngredient implements Converter<IngredientCommand, Ingredient> {
