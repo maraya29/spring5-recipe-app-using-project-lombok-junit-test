@@ -4,3 +4,4 @@
 
 [![codecov](https://codecov.io/gh/maraya29/spring5-recipe-app-using-project-lombok-junit-test/branch/master/graph/badge.svg)](https://codecov.io/gh/maraya29/spring5-recipe-app-using-project-lombok-junit-test)
 
+test
